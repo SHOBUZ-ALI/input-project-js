@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project java input method</title>
+</head>
+<body>
+    <p>sobuz task manager</p>
+    <input type="text" class="task_name">
+    <input type="date" class="date picker">
+    <button onclick="addTasks()">add my task</button>
+       
+       `
+    <script>
+        //rendering option-showing input on page
+        let tasks=[]
+        //array.forEach
+        renderTask()
+
+        //tasks.forEach(function(taskTitle){
+            //let elements=document.createElement('div')   //for making div(element create)
+            //elements.innerText=taskTitle
+           // document.body.appendChild(elements)
+        
+
+
+        //input option-input new task
+        function addTasks(){
+            let newInput = document.querySelector(".task_name") //push korte hole  <input type="text" class="task_name">dhorte hobe
+           let newTasks = newInput.value
+           newInput.value=''
+
+           tasks.push(newTasks);
+           renderTask()
+           //COPY RENDER-re-rendaring.aftar one push that will shon on screen.but will see or repeate all
+            //tasks.forEach(function(taskTitle){
+            //let elements=document.createElement('div')
+            //taskTitle=elements.innerText
+            //document.body.appendChild(elements)
+        
+           };
+        function renderTask(){
+            tasks.forEach(function(taskTitle){
+            let elements=document.createElement('div')
+            taskTitle=elements.innerText
+            document.body.appendChild(elements)
+        });
+
+        }
+
+
+    </script>
+    
+</body>
+</html>
