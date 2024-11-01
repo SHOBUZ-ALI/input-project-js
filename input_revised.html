@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my task manager</title>
+</head>
+<body>
+    <p>sobuj task manager</p>
+    <input type="text" class="add_task">
+    <input type="date" class="picking date">
+    <button onclick="addtask()">addTask</button>
+
+    <script>
+     //for rendering
+     let task1='a'
+     let task2='v'
+     let task3='c'
+     task.forEach(function addtask(taskTitle){
+        let element=document.createElement('div')
+        element.innerText=taskTitle
+        document.body.appendChild(element)
+        
+     });
+
+
+
+    </script>
+    
+</body>
+</html>
